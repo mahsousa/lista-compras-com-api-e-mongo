@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  api:
+    image: ${DOCKER_REGISTRY-}apilistadecompra
+    build:
+      context: backend/src/ApiListaDeCompra
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+  front:
+    image: frontend:latest
+    build: 
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
