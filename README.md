@@ -28,25 +28,25 @@ Certifique-se de ter os seguintes itens instalados:
 ## Configuração do Ambiente
 
 1. **Clone o Repositório**
-<br>git clone https://github.com/seuusuario/lista-de-compras.git
-<br>cd lista-de-compras
+<br>- git clone https://github.com/seuusuario/lista-de-compras.git
+<br>- cd lista-de-compras
 
 2. **Inicie os Containers**
 <br>Execute o comando abaixo para iniciar os containers Docker, isso irá construir e iniciar os containers para o frontend, backend e MongoDB.
-<br>docker-compose up --build
+<br>- docker-compose up --build
 
 3. **Instale as Dependências do Frontend**
 <br>Navegue até o diretório frontend e instale as dependências:
-<br>cd frontend
-<br>npm install
+<br>- cd frontend
+<br>- npm install
 
 4. **Execute o Frontend**
 <br>Para iniciar o frontend em modo de desenvolvimento:
-<br>npm start
+<br>- npm start
 
 5. **Uso**
-<br>Frontend: Acesse o frontend em http://localhost:3000 para interagir com a lista de compras.
-<br>Backend: A API REST estará disponível em http://localhost:5000
+<br>- Frontend: Acesse o frontend em http://localhost:3000 para interagir com a lista de compras.
+<br>- Backend: A API REST estará disponível em http://localhost:5000
 
 
 
