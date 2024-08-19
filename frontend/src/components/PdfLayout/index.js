@@ -1,5 +1,5 @@
 import React from 'react';
-import { Font, Image, Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+import { Font, Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 
 
 Font.register({
@@ -42,20 +42,7 @@ const styles = StyleSheet.create({
   }
 });
 
-
-
-// Create Document Component
-export const PdfLayout = () => {
-
-
-  function getdata() {
-    return JSON.parse(localStorage.getItem('transactionsList'));
-  }
-
-
-  function getdata() {
-    return JSON.parse(localStorage.getItem('transactions'));
-  }
+export const PdfLayout = ({data}) => {
 
   function renderRow(row) {
     return (
@@ -107,7 +94,7 @@ export const PdfLayout = () => {
 
   let rows = [];
   let rowsTotais = [];
-  let data = getdata();
+  console.log('PdfLayout', data);
 
   if (data != null) {
     prepararSessaoTotais(data);

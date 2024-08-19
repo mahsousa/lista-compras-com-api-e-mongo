@@ -53,7 +53,7 @@ const App = () => {
     <>
       <Header />
       <div className="Inicio">
-        <Dashboard className="resume" entrada={entrada} saida={saida} total={total} />
+        <Dashboard className="resume" entrada={entrada} saida={saida} total={total} transacoes={transactionsList} />
         <div className="Form">
           <Form
             handleAdd={handleAdd}

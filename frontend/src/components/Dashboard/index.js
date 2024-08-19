@@ -10,14 +10,14 @@ import{
 
 
 
-const Dashboard = ({entrada, saida, total}) => {
+const Dashboard = ({entrada, saida, total, transacoes}) => {
   const totalNum =  parseFloat(total);
   return (
       <C.Container>
         <DashItem title="Total Orçamento"  Icon={FaRegArrowAltCircleUp} iconColor="green" value={entrada}/>
         <DashItem title="Total Gasto" Icon={FaRegArrowAltCircleDown} iconColor="red" value={saida}/>
         <DashItem title="Disponivel" Icon={FaDollarSign} value={total} textoRed={ totalNum < 0 ? true : false}/>
-        <Assets key="assets"/>
+        <Assets key="assets" data={transacoes}/>
       </C.Container>
   );
 };

@@ -7,23 +7,12 @@ import {
   AiFillPrinter,
 } from "react-icons/ai";
 
-import {
-  FaTrashAlt,
-} from "react-icons/fa";
-
-
-function Assets() {
-
-  function clearAllStorage() {
-    localStorage.removeItem("transactions");
-    window.location.reload(true);
-
-  }
-
+function Assets({data}) {
+  console.log('Assets', data);
   return (
     <>
       <C.Container>
-        <PDFDownloadLink document={<PdfLayout />} fileName="somename.pdf">
+        <PDFDownloadLink document={<PdfLayout data={data} />} fileName="somename.pdf">
           {({ loading }) =>
             loading ? 'Loading document...' : ''
           }
@@ -34,12 +23,6 @@ function Assets() {
             padding:'5px'
           }} />
         </PDFDownloadLink >
-        <FaTrashAlt style={{
-          color: "#215581",
-          height: '40px',
-          width: '30px',
-          padding:'5px'
-        }} onClick={clearAllStorage} />
       </C.Container>
     </>
   )
