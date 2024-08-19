@@ -7,7 +7,6 @@ Font.register({
   src: 'http://fonts.gstatic.com/s/poppins/v1/hlvAxH6aIdOjWlLzgm0jqg.ttf',
 });
 
-// Create styles
 const styles = StyleSheet.create({
   body: {
     paddingTop: 35,

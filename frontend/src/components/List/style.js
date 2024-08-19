@@ -7,7 +7,6 @@ export const Table = styled.table`
   border-radius: 5px;
   padding: 20px;
   margin-top: 5px;
-  // max-width: 1120px;
 `;
 
 export const Thead = styled.thead``;

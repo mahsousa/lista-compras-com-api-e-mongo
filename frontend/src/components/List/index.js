@@ -9,8 +9,6 @@ const List = ({ itens, setItens, listItens}) =>{
   useEffect(() =>{
     listItens();
   },[]);
-
-  //um filtro que carrega todas as transações onde é diferente do ID passado por parametro
   
   const onDelete = (ID) =>{
       var itemService = new ItemService(); 

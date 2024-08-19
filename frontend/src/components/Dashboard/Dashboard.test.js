@@ -10,7 +10,6 @@ jest.mock("@react-pdf/renderer", () => {
 
   const PDFDownloadLink = ({ document, fileName, children }) => {
     const mockOnClick = () => {
-      // Fazer algo quando o link for clicado
     };
 
     return (

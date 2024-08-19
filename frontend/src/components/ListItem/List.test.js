@@ -21,7 +21,6 @@ it("verifica se a tabela foi renderizada corretamente", () => {
 
   fireEvent.click(deleteButtonItem1);
 
-  // Verifique se a função onDelete foi chamada com os IDs corretos
   expect(onDeleteMock).toHaveBeenCalledTimes(1);
   expect(onDeleteMock).toHaveBeenCalledWith(item1.id);
 });

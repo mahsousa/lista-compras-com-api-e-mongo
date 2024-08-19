@@ -21,7 +21,6 @@ jest.mock("@react-pdf/renderer", () => {
 
   const PDFDownloadLink = ({ document, fileName, children }) => {
     const mockOnClick = () => {
-      // Fazer algo quando o link for clicado
     };
 
     return (
@@ -100,8 +99,6 @@ it('chama o componente PdfLayout ao clicar no ícone de printer', () => {
 
   const printerIcon = screen.getByTestId('printer-icon');
   fireEvent.click(printerIcon);
-
-  // Aguarda o próximo ciclo de microtarefa para verificar a atualização da variável
   setTimeout(() => {
     expect(pdfLayoutCalled).toBe(true);
   }, 0);

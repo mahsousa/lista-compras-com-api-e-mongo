@@ -7,12 +7,11 @@ class ItemService {
         try {
             const response = await axios.get(API_URL);
             console.log(response);
-            // Supondo que a resposta tenha os campos Descricao, Valor, Tipo
             return response.data.map(item => ({
                 descricao: item.descricao,
                 quantia: item.valor,
                 saida: item.tipo === 1,
-                id: item.id  // Supondo que cada item tem um identificador único
+                id: item.id 
             }));
         } catch (error) {
             console.error('Error fetching transactions:', error);
